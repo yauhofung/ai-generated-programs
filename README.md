@@ -8,6 +8,7 @@ A repository of AI-generated scripts that do helpful things!
    - PyEnv
    - Poetry
    - Make
+   - FFmpeg
 2. Run the script:
    ```shell
    make && poetry run python <SCRIPT.py>
