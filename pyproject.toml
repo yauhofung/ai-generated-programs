@@ -1,0 +1,16 @@
+[tool.poetry]
+package-mode = false
+name = "ai-generated-programs"
+version = "0.1.0"
+description = "A repository of AI-generated scripts that do helpful things!"
+authors = ["Yau Ho Fung <yauhodev@gmail.com>"]
+license = "Proprietary"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
