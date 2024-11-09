@@ -6,6 +6,14 @@ def download_video(url, download_type):
         "format": "bestaudio/best"
         if download_type == "audio"
         else "bestvideo+bestaudio/best",
+        "postprocessors": [
+            {
+                "key": "FFmpegExtractAudio",
+                "preferredcodec": "vorbis",  # Use 'vorbis' for OGG format
+            }
+        ]
+        if download_type == "audio"
+        else [],
         "outtmpl": "output/%(title)s.%(ext)s",  # Save files to the output directory
     }
 
