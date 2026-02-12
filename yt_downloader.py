@@ -15,6 +15,10 @@ def download_video(url, download_type):
         if download_type == "audio"
         else [],
         "outtmpl": "output/%(title)s.%(ext)s",  # Save files to the output directory
+        # Enable Node.js as a JS runtime for YouTube extraction (deno is default but not installed)
+        "js_runtimes": {"deno": {}, "node": {}},
+        # Allow fetching the JS challenge solver script needed for YouTube (see yt-dlp wiki/EJS)
+        "remote_components": {"ejs:github"},
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
